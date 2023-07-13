@@ -1,0 +1,66 @@
+body {
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Quote-Project/Galaxy.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.quote-text {
+  font-family: 'Lobster', cursive;
+}
+
+.heading {
+  font-family: 'Lobster', cursive;
+}
+
+.heading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 50px;
+  color: #a166bd;
+}
+
+.quote-container {
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Quote-Project/Galaxy2.jpg');
+  background-size: cover;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 600px;
+}
+
+#quote-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#quote-author {
+  font-size: 18px;
+  font-style: italic;
+  color: #fff;
+}
+
+#new-quote-btn {
+  background-color: #480069;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#new-quote-btn:hover {
+  background-color: #45a049;
+}
