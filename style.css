@@ -50,7 +50,7 @@ body {
   color: #fff;
 }
 
-#new-quote-btn {
+#new-quote-btn, #last-quote-btn  {
   background-color: #480069;
   color: #fff;
   border: none;
@@ -61,6 +61,3 @@ body {
   transition: background-color 0.3s ease;
 }
 
-#new-quote-btn:hover {
-  background-color: #45a049;
-}

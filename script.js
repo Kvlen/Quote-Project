@@ -1,6 +1,9 @@
 const quoteTextElement = document.getElementById('quote-text');
 const quoteAuthorElement = document.getElementById('quote-author');
 const newQuoteBtn = document.getElementById('new-quote-btn');
+const lastQuoteBtn = document.getElementById('last-quote-btn');
+let lastQuote = null;
+let currentQuote = null;
 
 // Function to fetch a random quote from the Quoteable API
 async function fetchRandomQuote() {
@@ -22,18 +25,29 @@ async function fetchRandomQuote() {
 
 // Function to update the quote on the webpage
 function updateQuote(quote) {
+  lastQuote = currentQuote;
+  currentQuote = quote;
   quoteTextElement.innerHTML = `"${quote.content}"`;
   quoteAuthorElement.textContent = `- ${quote.author}`;
 }
 
 // Function to get a new random quote
 async function getNewQuote() {
+  lastQuote = currentQuote;
   const quote = await fetchRandomQuote();
   updateQuote(quote);
 }
 
-// Event listener for the "New Quote" button
+// Function to show the last quote
+function showLastQuote() {
+  if (lastQuote) {
+    updateQuote(lastQuote);
+  }
+}
+
+// Event listeners for the "New Quote" and "Last Quote" buttons
 newQuoteBtn.addEventListener('click', getNewQuote);
+lastQuoteBtn.addEventListener('click', showLastQuote);
 
 // Get and display initial quote
 getNewQuote();
